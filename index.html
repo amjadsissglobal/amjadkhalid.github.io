@@ -3,79 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amjad | Software Tester</title>
+  <title>AMJAD KHALID | Software Tester</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
 
-<header class="hero">
-  <h1>Amjad</h1>
+<!-- Dark / Light Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+<header class="hero reveal">
+  <h1>AMJAD KHALID</h1>
   <p>Software Tester • Manual & Automation</p>
+
+  <!-- EDIT OPTION: social links -->
   <div class="links">
     <a href="https://github.com/amjadsissglobal" target="_blank">GitHub</a>
     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
   </div>
 </header>
 
-<section class="card">
+<section class="card reveal">
   <h2>👋 About Me</h2>
+
+  <!-- EDIT OPTION: About text -->
   <p>
     Software Tester with hands-on experience in manual and automation testing.
-    Strong in test case design, defect tracking, and ensuring high-quality releases.
-    Passionate about breaking software to make it better.
+    Strong in test case design, defect tracking, regression testing, and ensuring
+    high-quality software delivery.
   </p>
 </section>
 
-<section class="card">
+<section class="card reveal">
   <h2>🛠 Skills</h2>
+
+  <!-- EDIT OPTION: Add/remove skills -->
   <div class="skills">
     <span>Manual Testing</span>
     <span>Test Case Design</span>
     <span>Bug Reporting</span>
     <span>Selenium</span>
     <span>Postman</span>
+    <span>API Testing</span>
     <span>SQL (Basics)</span>
     <span>Agile / Scrum</span>
   </div>
 </section>
 
-<section class="card">
+<section class="card reveal">
   <h2>📂 Projects</h2>
 
+  <!-- PROJECT 1 -->
   <div class="project">
-    <h3>Manual Testing – E-commerce Website</h3>
-    <p>Test case creation, functional testing, regression testing, defect reporting.</p>
+    <h3>Manual Testing – E-commerce Application</h3>
+
+    <!-- EDIT OPTION: project description -->
+    <p>
+      Designed test cases, executed functional and regression testing,
+      identified defects, and prepared test summary reports.
+    </p>
+
+    <!-- EDIT OPTION: GitHub repo link -->
     <a href="#" target="_blank">View Project →</a>
   </div>
 
+  <!-- PROJECT 2 -->
   <div class="project">
-    <h3>Automation Testing – Selenium</h3>
-    <p>Automated login, signup, and core flows using Selenium WebDriver.</p>
+    <h3>Automation Testing – Selenium Framework</h3>
+
+    <!-- EDIT OPTION: project description -->
+    <p>
+      Automated login, signup, and checkout workflows using Selenium WebDriver.
+      Implemented reusable test scripts and reports.
+    </p>
+
+    <!-- EDIT OPTION: GitHub repo link -->
     <a href="#" target="_blank">View Project →</a>
   </div>
 </section>
 
-<section class="card">
+<section class="card reveal">
   <h2>🧠 How I Test an Application</h2>
+
+  <!-- EDIT OPTION: testing process -->
   <ul>
     <li>Understand requirements</li>
     <li>Identify test scenarios</li>
-    <li>Write test cases</li>
+    <li>Create test cases</li>
     <li>Execute tests</li>
-    <li>Log & track bugs</li>
+    <li>Log and track defects</li>
     <li>Perform regression testing</li>
   </ul>
 </section>
 
-<section class="card">
+<section class="card reveal">
   <h2>📞 Contact</h2>
+
+  <!-- EDIT OPTION: email -->
   <p>Email: <strong>your-email@gmail.com</strong></p>
 </section>
 
 <footer>
-  © 2026 Amjad • Software Testing Portfolio
+  © 2026 AMJAD KHALID • Software Testing Portfolio
 </footer>
+
+<script>
+  // Dark / Light Mode
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
+
+  // Scroll Reveal Animation
+  const reveals = document.querySelectorAll(".reveal");
+  window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
-
