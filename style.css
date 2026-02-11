@@ -1,56 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f7fa;
-    color: #333;
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
-header {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e293b);
 }
 
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.links a {
+  margin: 10px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid white;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: white;
+  color: #1e293b;
+}
+
+.card {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #020617;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills li {
-    background-color: #e5e7eb;
-    padding: 8px 12px;
-    border-radius: 5px;
-    list-style: none;
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 .project {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .project a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: bold;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #1f2937;
-    color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
 }
+
