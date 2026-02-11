@@ -7,22 +7,20 @@ body {
   margin: 0;
   background: #0f172a;
   color: #e5e7eb;
+  transition: 0.3s;
+}
+
+/* Light Mode */
+body.light {
+  background: #f8fafc;
+  color: #111827;
 }
 
 .hero {
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(135deg, #2563eb, #1e293b);
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
+  color: white;
 }
 
 .links a {
@@ -33,12 +31,17 @@ body {
   padding: 10px 18px;
   border: 1px solid white;
   border-radius: 25px;
-  transition: 0.3s;
 }
 
-.links a:hover {
-  background: white;
-  color: #1e293b;
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .card {
@@ -47,11 +50,10 @@ body {
   background: #020617;
   padding: 30px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-h2 {
-  margin-bottom: 15px;
+body.light .card {
+  background: white;
 }
 
 .skills span {
@@ -61,6 +63,10 @@ h2 {
   margin: 6px;
   border-radius: 20px;
   font-size: 14px;
+}
+
+body.light .skills span {
+  background: #e5e7eb;
 }
 
 .project {
@@ -73,17 +79,27 @@ h2 {
   font-weight: bold;
 }
 
-.project a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  padding-left: 20px;
-}
-
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.6;
 }
 
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
